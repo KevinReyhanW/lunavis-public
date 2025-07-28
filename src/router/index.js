@@ -3,7 +3,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '../pages/Home.vue';
 //import Login from '../pages/Login.vue';
-import LoginPage from '../pages/Login.vue'
+import LoginPage from '../pages/LoginPage.vue'
 
 Vue.use(Router);
 
