@@ -1,35 +1,65 @@
 <template>
-  <v-container>
+  <div class="login-page"
+  :style="{
+    backgroundImage: `url(${require('@/assets/background2.png')})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+    width: '100vw'
+    }"
+  >
+  
+  <v-container 
+    class="login-page fill-height d-flex align-center justify-center" 
+    style="background: transparent; min-height: 100vh;"
+  >
     <v-row justify="center">
       <v-col cols="12" sm="8" md="6">
-<<<<<<< HEAD
-        <v-img :src="require('@/assets/lunavislogo.png')" max-height="100" contain class="mb-4" />
-=======
-        <v-img src="@/assets/lunavislogo.png" max-height="100" contain class="mb-4" />
->>>>>>> temp-login
+        
         <!-- Loading indicator -->
         <v-overlay :value="loading">
           <v-progress-circular indeterminate size="64"></v-progress-circular>
         </v-overlay>
 
-        <!-- Login form -->
-        <v-card v-if="!isAuthenticated" class="pa-4">
-          <v-card-title>Login</v-card-title>
+        <!-- Login form field -->
+        <v-card v-if="!isAuthenticated" class="pa-4" 
+          :style = "{
+            backgroundColor :'#06155A', 
+            color: 'white', 
+            borderRadius :'10px'
+            }" 
+          >
+        <v-img :src="require('@/assets/lunavislogo.png')" max-height="100" contain class="mb-4" />
+          <v-card-title class="font-weight-bold">Visitor Management System</v-card-title>
           <v-card-text>
+
             <v-form @submit.prevent="handleLogin">
+
               <v-text-field
                 v-model="credentials.email"
+                density="compact"
                 label="Email"
                 type="email"
-                required
+                prepend-inner-icon="mdi-email-outline"
+                filled
+                class= "white-filled mb-4"
               />
+
               <v-text-field
                 v-model="credentials.password"
+                density="compact"
                 label="Password"
                 type="password"
-                required
+                prepend-inner-icon="mdi-key-outline"
+                filled
+                class= "white-filled"
               />
-              <v-btn type="submit" color="primary" block>
+              <v-btn 
+              type="submit" 
+              style="background-color: #F4941C; color: white; width: 150px; height: 50px; borderRadius: 8px; font-size: 20px;"
+              class="mx-auto d-block"
+              >
                 Login
               </v-btn>
             </v-form>
@@ -53,10 +83,11 @@
           timeout="3000"
         >
           {{ snackbar.text }}
-        </v-snackbar>
-      </v-col>
-    </v-row>
-  </v-container>
+         </v-snackbar>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -103,3 +134,29 @@ export default {
   }
 }
 </script>
+
+<style>
+.white-filled .v-field__overlay,
+.white-filled .v-input__control,
+
+
+.white-filled .v-field {
+  background-color: #fff !important;
+  border-radius: 10px !important;
+  margin-bottom: 16px;
+}
+
+.white-filled input,
+.white-filled .v-label {
+  color: #06155A !important; /* dark blue text for contrast */
+}
+
+.white-filled .v-icon {
+  color: #06155A !important;
+}
+
+.white-filled .v-field__line {
+  background-color: transparent !important;
+}
+</style>
+
