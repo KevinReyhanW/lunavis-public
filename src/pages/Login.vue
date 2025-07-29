@@ -2,11 +2,7 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" sm="8" md="6">
-<<<<<<< HEAD
         <v-img :src="require('@/assets/lunavislogo.png')" max-height="100" contain class="mb-4" />
-=======
-        <v-img src="@/assets/lunavislogo.png" max-height="100" contain class="mb-4" />
->>>>>>> temp-login
         <!-- Loading indicator -->
         <v-overlay :value="loading">
           <v-progress-circular indeterminate size="64"></v-progress-circular>
