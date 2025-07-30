@@ -1,18 +1,8 @@
 <template>
-  <div class="login-page"
-  :style="{
-    backgroundImage: `url(${require('@/assets/background2.png')})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    width: '100vw'
-    }"
-  >
+  <div class="login-page">
   
   <v-container 
-    class="login-page fill-height d-flex align-center justify-center" 
-    style="background: transparent; min-height: 100vh;"
+    class="login-page fill-height d-flex align-center justify-center container-wrapper"
   >
     <v-row justify="center">
       <v-col cols="12" sm="8" md="6">
@@ -23,14 +13,8 @@
         </v-overlay>
 
         <!-- Login form field -->
-        <v-card v-if="!isAuthenticated" class="pa-4" 
-          :style = "{
-            backgroundColor :'#06155A', 
-            color: 'white', 
-            borderRadius :'10px'
-            }" 
-          >
-        <v-img :src="require('@/assets/lunavislogo.png')" max-height="100" contain class="mb-4" />
+        <v-card v-if="!isAuthenticated" class="pa-4 login-card">
+        <v-img :src="require('@/assets/lunavislogo.png')" class="logo-image mb-4" contain />
           <v-card-title class="font-weight-bold">Visitor Management System</v-card-title>
           <v-card-text>
 
@@ -57,8 +41,7 @@
               />
               <v-btn 
               type="submit" 
-              style="background-color: #F4941C; color: white; width: 150px; height: 50px; borderRadius: 8px; font-size: 20px;"
-              class="mx-auto d-block"
+              class="mx-auto d-block login-button"
               >
                 Login
               </v-btn>
@@ -135,28 +118,7 @@ export default {
 }
 </script>
 
-<style>
-.white-filled .v-field__overlay,
-.white-filled .v-input__control,
-
-
-.white-filled .v-field {
-  background-color: #fff !important;
-  border-radius: 10px !important;
-  margin-bottom: 16px;
-}
-
-.white-filled input,
-.white-filled .v-label {
-  color: #06155A !important; /* dark blue text for contrast */
-}
-
-.white-filled .v-icon {
-  color: #06155A !important;
-}
-
-.white-filled .v-field__line {
-  background-color: transparent !important;
-}
+<style lang="scss">
+@use '@/styles/login.scss';
 </style>
 

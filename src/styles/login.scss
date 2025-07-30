@@ -1,0 +1,55 @@
+.login-page {
+  background-image: url('@/assets/background2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+
+  .container-wrapper {
+    background: transparent;
+    min-height: 100vh;
+  }
+  
+  .login-card {
+    background-color: #06155A !important;
+    color: white !important;
+    border-radius: 10px !important;
+  }
+
+  .logo-image {
+    max-height: 100px;
+  }
+
+  .login-button {
+    background-color: #F4941C !important;
+    color: white !important;
+    width: 150px !important;
+    height: 50px !important;
+    border-radius: 8px !important;
+    font-size: 20px !important;
+  }
+
+  .white-filled {
+    .v-field__overlay,
+    .v-input__control,
+    .v-field {
+      background-color: #fff !important;
+      border-radius: 10px !important;
+      margin-bottom: 16px;
+    }
+
+    input,
+    .v-label {
+      color: #06155A !important; /* dark blue text for contrast */
+    }
+
+    .v-icon {
+      color: #06155A !important;
+    }
+
+    .v-field__line {
+      background-color: transparent !important;
+    }
+  }
+}
