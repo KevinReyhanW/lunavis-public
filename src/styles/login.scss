@@ -17,6 +17,22 @@
     border-radius: 10px !important;
   }
 
+  .card-title {
+    font-weight: semibold !important;
+    font-size: 28px;
+    justify-content: center;
+    text-align: center;;
+  }
+
+  .field-label {
+    color: white;
+    font-weight: regular;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 4px;
+    margin-left: 4px;
+  }
+
   .logo-image {
     max-height: 100px;
   }
@@ -28,28 +44,5 @@
     height: 50px !important;
     border-radius: 8px !important;
     font-size: 20px !important;
-  }
-
-  .white-filled {
-    .v-field__overlay,
-    .v-input__control,
-    .v-field {
-      background-color: #fff !important;
-      border-radius: 10px !important;
-      margin-bottom: 16px;
-    }
-
-    input,
-    .v-label {
-      color: #06155A !important; /* dark blue text for contrast */
-    }
-
-    .v-icon {
-      color: #06155A !important;
-    }
-
-    .v-field__line {
-      background-color: transparent !important;
-    }
   }
 }

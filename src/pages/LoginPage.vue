@@ -15,28 +15,30 @@
         <!-- Login form field -->
         <v-card v-if="!isAuthenticated" class="pa-4 login-card">
         <v-img :src="require('@/assets/lunavislogo.png')" class="logo-image mb-4" contain />
-          <v-card-title class="font-weight-bold">Visitor Management System</v-card-title>
+          <v-card-title class="card-title">Visitor Management System</v-card-title>
           <v-card-text>
 
             <v-form @submit.prevent="handleLogin">
 
+              <div class="field-label">Email</div>
               <v-text-field
                 v-model="credentials.email"
                 density="compact"
-                label="Email"
+                label="Enter Your Email"
                 type="email"
                 prepend-inner-icon="mdi-email-outline"
-                filled
-                class= "white-filled mb-4"
+                solo
+                class= "white-filled"
               />
 
+              <div class="field-label">Password</div>
               <v-text-field
                 v-model="credentials.password"
                 density="compact"
-                label="Password"
+                label="Enter Your Password"
                 type="password"
                 prepend-inner-icon="mdi-key-outline"
-                filled
+                solo
                 class= "white-filled"
               />
               <v-btn 
