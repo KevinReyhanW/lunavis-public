@@ -5,6 +5,7 @@ import Home from '../pages/Home.vue';
 //import Login from '../pages/Login.vue';
 // import LoginPage from '../pages/Login.vue'
 import LoginPage from '../pages/LoginPage.vue'
+import LoginKiosk from '../pages/LoginKiosk.vue';
 
 Vue.use(Router);
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: LoginPage,
+    },
+    {
+      path: '/kiosk',
+      name: 'Kiosk',
+      component: LoginKiosk 
     },
     {
       path: '/home',
