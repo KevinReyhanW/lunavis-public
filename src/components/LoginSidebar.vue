@@ -1,7 +1,13 @@
 <template>
   <aside class = "sidebar">
     <v-layout column fill-height>
-      <v-img :src="require('@/assets/lunavislogo.png')" class="logo-image" contain />
+
+      <div class ="logo-wrapper">
+        <v-img :src="require('@/assets/lunavislogo.png')" class="logo-image" contain />
+      </div>
+
+      <!-- Spacer setelah teks -->
+      <v-spacer></v-spacer>
 
       <div class="center-wrapper">
         <div class="title">
