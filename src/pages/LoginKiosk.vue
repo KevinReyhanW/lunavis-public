@@ -113,6 +113,6 @@ export default {
 </script>
 
 <style lang="scss">
-@use '@/styles/login.scss';
+@use '@/styles/loginsidebar.scss';
 </style>
 

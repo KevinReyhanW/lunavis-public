@@ -1,20 +1,26 @@
 .sidebar {
     background-color: #0a1f60;
     color: white;
-    width: 400px;
-    height: 840px;
-    padding: 20px;
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    width: 20vw;
+    height: 100vh;
+    padding-top: 2%;
+    padding-bottom: 2;
     display: flex;
+    position: relative;
+    flex-direction: column;
 }
 
 .logo-wrapper {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  justify-content: right;
+  align-items: flex-start;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.logo-image{
+  max-width: 8rem;
+  height: auto;
 }
 
 .center-wrapper {
@@ -25,12 +31,13 @@
   align-items: center;
 }
 .title h2 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: 100%;
     line-height: 1.2;
 }
@@ -41,7 +48,7 @@
 
 .bottom-decor {
   position: relative;
-  bottom: 10px;
-  left: 0px;
+  bottom: 1vh;
+  left: 0%;
   opacity: 0.7;
 }
