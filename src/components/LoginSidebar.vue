@@ -3,7 +3,7 @@
     <v-layout column fill-height>
 
       <div class ="logo-wrapper">
-        <v-img :src="require('@/assets/lunavislogo.png')" class="logo-image" contain />
+        <v-img :src="require('@/assets/lunavislogo.png')" class="logo-sidebar" contain />
       </div>
 
       <!-- Spacer setelah teks -->

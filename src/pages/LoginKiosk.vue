@@ -1,5 +1,5 @@
 <template>
-  <div class="login-page">
+  <div class="login-page-kiosk">
     <v-container fluid fill-height class="pa-0">
       <v-layout row fill-height>
 
@@ -18,7 +18,7 @@
 
             <!-- Login form -->
             <v-card v-if="!isAuthenticated" class="pa-4 login-card">
-              <v-img :src="require('@/assets/lunavislogo.png')" class="logo-image mb-4" contain />
+              <v-img :src="require('@/assets/lunavislogo.png')" class="logo-kiosk mb-4" contain />
               <v-card-title class="card-title">Visitor Management System</v-card-title>
               <v-card-text>
                 <v-form @submit.prevent="handleLogin">
@@ -113,6 +113,6 @@ export default {
 </script>
 
 <style lang="scss">
-@use '@/styles/loginsidebar.scss';
+@use '@/styles/loginkiosk.scss';
 </style>
 
