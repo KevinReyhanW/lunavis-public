@@ -38,5 +38,5 @@ export default {
 </script>
 
 <style lang="scss">
-@use '@/styles/sidebar.scss';
+@use '@/styles/sidebarkiosk.scss';
 </style>

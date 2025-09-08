@@ -6,6 +6,7 @@ import Home from '../pages/Home.vue';
 // import LoginPage from '../pages/Login.vue'
 import LoginPage from '../pages/LoginPage.vue'
 import LoginKiosk from '../pages/LoginKiosk.vue';
+import Dashboard from '../pages/Dashboard.vue';
 
 Vue.use(Router);
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/kiosk',
       name: 'Kiosk',
       component: LoginKiosk 
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
     },
     {
       path: '/home',
