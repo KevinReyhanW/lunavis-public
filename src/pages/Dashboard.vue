@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+    <AppSidebar />
     <h1 class="mb-4">Dashboard</h1>
 
     <!-- Card Ringkasan -->
@@ -35,13 +36,13 @@
 
 <script>
 
-import Sidebar from '@/components/Sidebar.vue'
+import AppSidebar from '@/components/Sidebar.vue'
 
 export default {
-  name: "Dashboard",
+  name: "DashboardReceptionist",
 
   components: {
-    Sidebar
+    AppSidebar,
   },
 
   data: () => ({
@@ -58,11 +59,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.summary-card {
-  text-align: center;
-  background: #1e3a8a;
-  color: white;
-  border-radius: 0.75rem;
-}
-</style>
+
