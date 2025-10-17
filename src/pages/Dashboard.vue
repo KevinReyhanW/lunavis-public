@@ -31,18 +31,22 @@
         class="elevation-1"
       ></v-data-table>
     </v-card>
+    <!-- footer in-flow: akan menempel di bawah dan berada di kiri -->
+    <AppFooter class="page-footer" />
   </v-container>
 </template>
 
 <script>
 
 import AppSidebar from '@/components/Sidebar.vue'
+import AppFooter from '@/components/Footer.vue'
 
 export default {
   name: "DashboardReceptionist",
 
   components: {
     AppSidebar,
+    AppFooter
   },
 
   data: () => ({

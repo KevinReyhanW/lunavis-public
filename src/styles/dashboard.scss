@@ -1,3 +1,24 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0.5rem; /* sesuaikan */
+}
+
+/* area konten utama tumbuh agar footer terdorong ke bawah */
+.page-body {
+  flex: 1 1 auto;
+}
+
+/* footer in-flow: posisikan kiri bawah dalam layout */
+.page-footer {
+  margin-top: auto; 
+  align-self: flex-start; /* sejajar ke kiri */
+  /* jika Footer.vue default lebar 100%, pakai width sesuai kebutuhan */
+  /* width: 100%; */
+}
+
+/* styling summary-card (tetap seperti sebelumnya) */
 .summary-card {
   text-align: center;
   background: #1e3a8a;

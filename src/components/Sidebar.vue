@@ -14,7 +14,6 @@
 
     <!-- Menu Utama -->
     <v-list dense nav>
-
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -25,7 +24,7 @@
           active-class="active-link"
           class = "menu-item"
         >
-          <v-list-item-icon>
+          <v-list-item-icon class="menu-icon">
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
           
@@ -43,8 +42,9 @@ export default {
   data: () => ({
     drawer: true,
     items: [
-      { title: "Daftar Pemantauan Tamu", icon: "mdi-monitor", to: "/pemantauan" },
-      { title: "Data Transaksi", icon: "mdi-cash-multiple", to: "/transaksi" },
+      { title: "Dashboard", icon: "mdi-view-dashboard"},
+      { title: "Permintaan Kunjungan", icon: "mdi-clipboard-account", to: "/permintaankunjungan" },
+      { title: "Laporan", icon: "mdi-file-document", to: "/laporan" },
     ],
   }),
 };
