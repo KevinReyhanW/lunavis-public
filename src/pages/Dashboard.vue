@@ -4,23 +4,49 @@
     <h1 class="mb-4">Dashboard</h1>
 
     <!-- Card Ringkasan -->
-    <v-row>
-      <v-col cols="12" md="6" lg="3">
-        <v-card class="pa-4 summary-card">
-          <v-icon large class="mb-2">mdi-account-group</v-icon>
-          <div class="title">120</div>
-          <div class="caption">Total Tamu</div>
-        </v-card>
-      </v-col>
+    <v-row class="stats-row">
+        <v-col cols="12" md="4">
+          <v-card class="stat-card stat-card-green">
+            <div class="stat-card-content">
+              <div class="stat-icon-wrapper stat-icon-green">
+                <v-icon color="white" size="24">mdi-check-circle</v-icon>
+              </div>
+              <div>
+                <div class="stat-number">2</div>
+                <div class="stat-label">Checkin</div>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
 
-      <v-col cols="12" md="6" lg="3">
-        <v-card class="pa-4 summary-card">
-          <v-icon large class="mb-2">mdi-cash-multiple</v-icon>
-          <div class="title">58</div>
-          <div class="caption">Transaksi</div>
-        </v-card>
-      </v-col>
-    </v-row>
+      <v-col cols="12" md="4">
+          <v-card class="stat-card stat-card-red">
+            <div class="stat-card-content">
+              <div class="stat-icon-wrapper stat-icon-red">
+                <v-icon color="white" size="24">mdi-close-circle</v-icon>
+              </div>
+              <div>
+                <div class="stat-number">2</div>
+                <div class="stat-label">Tidak Checkout</div>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12" md="4">
+          <v-card class="stat-card stat-card-orange">
+            <div class="stat-card-content">
+              <div class="stat-icon-wrapper stat-icon-orange">
+                <v-icon color="white" size="24">mdi-package-variant</v-icon>
+              </div>
+              <div>
+                <div class="stat-number">2</div>
+                <div class="stat-label">Barang Ditemukan</div>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
 
     <!-- Tabel Data Terbaru -->
     <v-card class="mt-6">
@@ -51,7 +77,7 @@ export default {
 
   data: () => ({
     headers: [
-      { text: "Nama", value: "name" },
+      { text: "Nama Pengunjung", value: "name" },
       { text: "Kategori", value: "category" },
       { text: "Tanggal", value: "date" },
     ],
@@ -63,4 +89,7 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@use '../styles/dashboard.scss';
+</style>
 
